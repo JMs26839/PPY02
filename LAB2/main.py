@@ -31,8 +31,9 @@ Write a Python program that takes input from the user to create a list of intege
 input_numbers = input("Enter a series of space-separated integers: ")
 
 # Convert Input:
-
-
+converter_inputs= [int(x) for x in input_numbers.split()]
+print(str(converter_inputs))
+numbers_list="123"
 # Sorting:
 
 
