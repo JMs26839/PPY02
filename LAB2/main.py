@@ -21,486 +21,649 @@ Write a Python program that takes input from the user to create a list of intege
 
   example:
   ```
-  Enter a series of space-separated integers: 5 2 8 1 9
-
-  Sorted list: [1, 2, 5, 8, 9]
-  ```
-"""
-
-# # Input
+#   Enter a series of space-separated integers: 5 2 8 1 9
+#
+#   Sorted list: [1, 2, 5, 8, 9]
+#   ```
+# """
+#
+# # # Input
+# # input_numbers = input("Enter a series of space-separated integers: ")
+# #
+# # # Convert Input:
+# # convert = [int(ele) for ele in input_numbers.split()]
+# #
+# # # Sorting:
+# # numbers_list= sorted(convert)
+# #
+# # # Print Output
+# # print("Sorted list:", numbers_list)
+#
+# """-----------------------------------------------------------------------------
+#
+# Difference between Lists and Tuples:
+#
+# Lists are mutable, meaning their elements can be changed after creation, while tuples are immutable, meaning their elements cannot be changed after creation.
+# Lists are represented by square brackets [ ], whereas tuples are represented by parentheses ( ).
+# Lists have methods like append(), insert(), and remove() to modify the list, while tuples do not support such methods due to their immutability.
+# Lists are typically used when the elements need to be modified or updated frequently, while tuples are used when the data is meant to be constant or unchangeable.
+#
+# -----------------------------------------------------------------------------
+#
+# 4.
+# Extend the previous Python program to include tuples. Now, in addition to creating a list of integers from user input,
+# the program should also create a tuple of those integers and perform the following operations:
+#
+#   a. Input: Ask the user to enter a series of space-separated integers.
+#
+#
+#   b. Convert Input: Convert the input string into a list of integers and a tuple of integers.
+#
+#   c. Sorting: Sort both the list and the tuple in ascending order.
+#
+#   d. Print Output: Print the sorted list and tuple.
+#
+#   example:
+#   ```
+#   Enter a series of space-separated integers: 5 2 8 1 9
+#
+#   Sorted list: [1, 2, 5, 8, 9]
+#   Sorted tuple: (1, 2, 5, 8, 9)
+#   ```
+# """
+#
+#
 # input_numbers = input("Enter a series of space-separated integers: ")
 #
 # # Convert Input:
-# convert = [int(ele) for ele in input_numbers.split()]
-#
-# # Sorting:
-# numbers_list= sorted(convert)
-#
-# # Print Output
-# print("Sorted list:", numbers_list)
-
-"""-----------------------------------------------------------------------------
-
-Difference between Lists and Tuples:
-
-Lists are mutable, meaning their elements can be changed after creation, while tuples are immutable, meaning their elements cannot be changed after creation.
-Lists are represented by square brackets [ ], whereas tuples are represented by parentheses ( ).
-Lists have methods like append(), insert(), and remove() to modify the list, while tuples do not support such methods due to their immutability.
-Lists are typically used when the elements need to be modified or updated frequently, while tuples are used when the data is meant to be constant or unchangeable.
-
------------------------------------------------------------------------------
-
-4.
-Extend the previous Python program to include tuples. Now, in addition to creating a list of integers from user input, 
-the program should also create a tuple of those integers and perform the following operations:
-
-  a. Input: Ask the user to enter a series of space-separated integers.
-
-
-  b. Convert Input: Convert the input string into a list of integers and a tuple of integers.
-
-  c. Sorting: Sort both the list and the tuple in ascending order.
-
-  d. Print Output: Print the sorted list and tuple.
-
-  example:
-  ```
-  Enter a series of space-separated integers: 5 2 8 1 9
-  
-  Sorted list: [1, 2, 5, 8, 9]
-  Sorted tuple: (1, 2, 5, 8, 9)
-  ```
-"""
-
-
-input_numbers = input("Enter a series of space-separated integers: ")
-
-# Convert Input:
-numbers_list=[int(e) for e in input_numbers.split()]
-def convert(list_ints):
-    return tuple(list_ints)
-
-tuples_ints = convert(numbers_list)
-print(type(tuples_ints))
-
-
-# Sorting:
-sorted_tuple=sorted(tuples_ints)
-print(sorted(tuples_ints))
-
-
-#Print Output
-print("Sorted list:", numbers_list)
-print("Sorted tuple:", sorted_tuple)
-
-"""5.
-Extend the previous Python program to demonstrate the manipulation of lists using the append(), insert(), and remove()
- functions, and to emphasize the immutability of tuples.
-
-  a. Input: Ask the user to enter a series of space-separated integers.
-
-  b. Convert Input: Convert the input string into a list of integers and a tuple of integers.
-
-  c. Manipulate List: Use the append(), insert(), and remove() functions to modify the list.
-
-  d. Attempt to Modify Tuple: Try to modify the tuple using the same operations as the list.
-
-  e. Print Output: Print the modified list and attempt to print the modified tuple.
-
-  example:
-  ```
-  Enter a series of space-separated integers: 5 2 8 1 9
-
-  Tuples are immutable and cannot be modified.
-  Modified list: [5, 2, 20, 1, 9, 10]
-  Tuple remains unchanged: (5, 2, 8, 1, 9)
-  ```
-"""
-
-# # Input
-# input_numbers2 = input("Enter a series of space-separated integers: ")
-#
-# # Convert Input
-# numbers_list2=[int(e) for e in input_numbers2.split()]
-# def convert2(list_ints):
+# numbers_list=[int(e) for e in input_numbers.split()]
+# def convert(list_ints):
 #     return tuple(list_ints)
 #
-# numbers_tuple = convert2(numbers_list2)
-# print(type(numbers_tuple))
+# tuples_ints = convert(numbers_list)
+# print(type(tuples_ints))
 #
 #
+# # Sorting:
+# sorted_tuple=sorted(tuples_ints)
+# print(sorted(tuples_ints))
 #
-# # Manipulate List
-# #   Append 10 to the list
-# numbers_list2.append(10)
-# #   Insert 20 at index 2
-# numbers_list2.insert(2,20)
-# #   Remove one elementfrom the list
-# numbers_list2.remove(2)
 #
-# # Attempt to Modify Tuple (this will raise an error)
-# try:
-#     numbers_tuple.append(10)
-#     #   Append 10 to the tuple
-# except AttributeError:
-#     print("Tuples are immutable and cannot be modified.")
-# try:
-#     #   Insert 20 at index 2
-#     numbers_tuple.insert(2, 20)
-# except AttributeError:
-#     pass  # Insert operation will also raise an error
+# #Print Output
+# print("Sorted list:", numbers_list)
+# print("Sorted tuple:", sorted_tuple)
 #
-# try:
-#     numbers_tuple.remove(2)
-#     #   Remove one element  from the tuple
-# except AttributeError:
-#     pass  # Remove operation will also raise an error
+# """5.
+# Extend the previous Python program to demonstrate the manipulation of lists using the append(), insert(), and remove()
+#  functions, and to emphasize the immutability of tuples.
 #
-# # Print Output
-# print("Modified list:", numbers_list2)
-# print("Tuple remains unchanged:", numbers_tuple)
-
-"""--------------------------------------------------------------------------------
-# 1. **Set**:
-# A set in Python is a collection of unique elements that are unordered. This means that you cannot access elements 
-by indices, and the elements are stored in an unordered manner. The main feature of a set is that 
-each element in the set must be unique. Sets are useful when you want to perform set operations,
- such as mathematical set operations (e.g., union, difference, intersection).
+#   a. Input: Ask the user to enter a series of space-separated integers.
 #
-# Example of creating a set:
-# ```python
-# set = {1, 2, 3, 4, 5}  # Creating a set
-# print(set)  # Displaying the set
-# ```
+#   b. Convert Input: Convert the input string into a list of integers and a tuple of integers.
 #
-# 2. **Dictionary**:
-# A dictionary in Python is a collection of key-value pairs, where each key is unique. 
-Dictionaries are unique in the sense that they allow us to associate specific values with specific keys, 
-making it easy to retrieve values by referring to their corresponding keys. 
-Dictionaries are very useful when you want to store data in the form of key-value pairs, such as dictionary definitions,
- test scores, survey results, etc.
+#   c. Manipulate List: Use the append(), insert(), and remove() functions to modify the list.
 #
-# Example of creating a dictionary:
-# ```python
-# dictionary = {"key1": "value1", "key2": "value2", "key3": "value3"}  # Creating a dictionary
-# print(dictionary)  # Displaying the dictionary
-# ```
-# It's important to remember that both in sets and dictionaries, 
-keys (in the case of dictionaries) and elements (in the case of sets) must be hashable,
- meaning they must be immutable (e.g., numbers, strings, tuples), and they must have a defined hashing method.
+#   d. Attempt to Modify Tuple: Try to modify the tuple using the same operations as the list.
 #
-# --------------------------------------------------------------------------------
-#
-# 6.
-# Additionally, introduce sets and dictionaries and perform basic operations on them.
-#
-#   a. ...
-#
-#   b. ...
-#
-#   c. ...
-#
-#   d. ...
-#
-#   e. Set Operations: Perform union, intersection, and difference operations on the set.
-#
-#   f. Dictionary Operations: Print the dictionary, add a new key-value pair, and delete an existing key-value pair.
-#
-#   g. Print Output: Print the modified list, unchanged tuple, set operations results, and updated dictionary.
+#   e. Print Output: Print the modified list and attempt to print the modified tuple.
 #
 #   example:
 #   ```
 #   Enter a series of space-separated integers: 5 2 8 1 9
 #
 #   Tuples are immutable and cannot be modified.
-#   Original Dictionary: {5: 25, 2: 4, 8: 64, 1: 1, 9: 81}
 #   Modified list: [5, 2, 20, 1, 9, 10]
 #   Tuple remains unchanged: (5, 2, 8, 1, 9)
-#   Union of set: {1, 2, 5, 9, 10, 11, 12}
-#   Intersection of set: {8, 5}
-#   Difference of set: {9}
-#   Updated Dictionary: {5: 25, 2: 4, 1: 1, 9: 81, 11: 121}
-#
 #   ```
 # """
 #
-# # Input
-# input_numbers = input("Enter a series of space-separated integers: ")
+# # # Input
+# # input_numbers2 = input("Enter a series of space-separated integers: ")
 # #
 # # # Convert Input
+# # numbers_list2=[int(e) for e in input_numbers2.split()]
+# # def convert2(list_ints):
+# #     return tuple(list_ints)
+# #
+# # numbers_tuple = convert2(numbers_list2)
+# # print(type(numbers_tuple))
+# #
+# #
+# #
+# # # Manipulate List
+# # #   Append 10 to the list
+# # numbers_list2.append(10)
+# # #   Insert 20 at index 2
+# # numbers_list2.insert(2,20)
+# # #   Remove one elementfrom the list
+# # numbers_list2.remove(2)
+# #
+# # # Attempt to Modify Tuple (this will raise an error)
+# # try:
+# #     numbers_tuple.append(10)
+# #     #   Append 10 to the tuple
+# # except AttributeError:
+# #     print("Tuples are immutable and cannot be modified.")
+# # try:
+# #     #   Insert 20 at index 2
+# #     numbers_tuple.insert(2, 20)
+# # except AttributeError:
+# #     pass  # Insert operation will also raise an error
+# #
+# # try:
+# #     numbers_tuple.remove(2)
+# #     #   Remove one element  from the tuple
+# # except AttributeError:
+# #     pass  # Remove operation will also raise an error
+# #
+# # # Print Output
+# # print("Modified list:", numbers_list2)
+# # print("Tuple remains unchanged:", numbers_tuple)
+#
+# """--------------------------------------------------------------------------------
+# # 1. **Set**:
+# # A set in Python is a collection of unique elements that are unordered. This means that you cannot access elements
+# by indices, and the elements are stored in an unordered manner. The main feature of a set is that
+# each element in the set must be unique. Sets are useful when you want to perform set operations,
+#  such as mathematical set operations (e.g., union, difference, intersection).
+# #
+# # Example of creating a set:
+# # ```python
+# # set = {1, 2, 3, 4, 5}  # Creating a set
+# # print(set)  # Displaying the set
+# # ```
+# #
+# # 2. **Dictionary**:
+# # A dictionary in Python is a collection of key-value pairs, where each key is unique.
+# Dictionaries are unique in the sense that they allow us to associate specific values with specific keys,
+# making it easy to retrieve values by referring to their corresponding keys.
+# Dictionaries are very useful when you want to store data in the form of key-value pairs, such as dictionary definitions,
+#  test scores, survey results, etc.
+# #
+# # Example of creating a dictionary:
+# # ```python
+# # dictionary = {"key1": "value1", "key2": "value2", "key3": "value3"}  # Creating a dictionary
+# # print(dictionary)  # Displaying the dictionary
+# # ```
+# # It's important to remember that both in sets and dictionaries,
+# keys (in the case of dictionaries) and elements (in the case of sets) must be hashable,
+#  meaning they must be immutable (e.g., numbers, strings, tuples), and they must have a defined hashing method.
+# #
+# # --------------------------------------------------------------------------------
+# #
+# # 6.
+# # Additionally, introduce sets and dictionaries and perform basic operations on them.
+# #
+# #   a. ...
+# #
+# #   b. ...
+# #
+# #   c. ...
+# #
+# #   d. ...
+# #
+# #   e. Set Operations: Perform union, intersection, and difference operations on the set.
+# #
+# #   f. Dictionary Operations: Print the dictionary, add a new key-value pair, and delete an existing key-value pair.
+# #
+# #   g. Print Output: Print the modified list, unchanged tuple, set operations results, and updated dictionary.
+# #
+# #   example:
+# #   ```
+# #   Enter a series of space-separated integers: 5 2 8 1 9
+# #
+# #   Tuples are immutable and cannot be modified.
+# #   Original Dictionary: {5: 25, 2: 4, 8: 64, 1: 1, 9: 81}
+# #   Modified list: [5, 2, 20, 1, 9, 10]
+# #   Tuple remains unchanged: (5, 2, 8, 1, 9)
+# #   Union of set: {1, 2, 5, 9, 10, 11, 12}
+# #   Intersection of set: {8, 5}
+# #   Difference of set: {9}
+# #   Updated Dictionary: {5: 25, 2: 4, 1: 1, 9: 81, 11: 121}
+# #
+# #   ```
+# # """
+# #
+# # # Input
+# # input_numbers = input("Enter a series of space-separated integers: ")
+# # #
+# # # # Convert Input
 # lista = [ int(el)for el in input_numbers.split()]
 # set_of_numbers = set(lista)
-# print(type(set_of_numbers))
-# print(set_of_numbers)
-# # Manipulate List
-
-
-# Append 10 to the list
-# lista.append(10)
-# Insert 20 at index 2
-# lista.insert(2,20)
-# Remove the element 8
-# lista.remove(8)
-# con.remove(8)
-###############################FinishedHere
-# Attempt to Modify Tuple (this will raise an error)
-# try: tup.append(10)
-    # Append 10 to the tuple
-# except AttributeError:
-#     print("Tuples are immutable and cannot be modified.")
+# # print(type(set_of_numbers))
+# # print(set_of_numbers)
+# # # Manipulate List
 #
-# Set Operations
+#
+# # Append 10 to the list
+# # lista.append(10)
+# # Insert 20 at index 2
+# # lista.insert(2,20)
+# # Remove the element 8
+# # lista.remove(8)
+# # con.remove(8)
+# ###############################FinishedHere
+# # Attempt to Modify Tuple (this will raise an error)
+# # try: tup.append(10)
+#     # Append 10 to the tuple
+# # except AttributeError:
+# #     print("Tuples are immutable and cannot be modified.")
+# #
+# # Set Operations
 # set2={1,2,3,4,5,6,7,8,9}
 # # Union
-# union= set_of_numbers.union(set2)
-# print(union)
+# set_union= set_of_numbers.union(set2)
+#
 # # Intersection
-# inter= set_of_numbers.intersection(set2)
-# print(inter)
+# set_intersection= set_of_numbers.intersection(set2)
+#
+# print(set_intersection)
 # # Difference
-# difference= set_of_numbers.difference(set2)
-# print(difference)
+# set_difference= set_of_numbers.difference(set2)
 #
-# # Dictionary Operations
-# numbers_dict={lista:lista**2 for lista in lista}
-# # print("Original Dictionary:", numbers_dict)
-# print(numbers_dict)
-# # Add a new key-value pair
-# numbers_dict.update( {10:101, 20:201})
-# print(numbers_dict)
-# # Delete an existing key-value pair
-# numbers_dict.popitem()
-# print(numbers_dict)
-#
-# # Print Output
-
-# print("Modified list:", numbers_list)
-# print("Tuple remains unchanged:", numbers_tuple)
-# print("Union of set:", set_union)
-# print("Intersection of set:", set_intersection)
-# print("Difference of set:", set_difference)
-# print("Updated Dictionary:", numbers_dict)
-
-"""7. **Built-in Types and Type Conversion**
-#
-#   Extend the previous Python program to demonstrate the use of built-in types and type conversion. Perform the following operations:
-#
-#   a. ...
-#
-#   b. ...
-#
-#   c. ...
-#
-#   d. ...
-#
-#   e. ...
-#
-#   f. ...
-#
-#   g. Type Conversion: Convert the list to a tuple, set, and dictionary. Convert the tuple to a list, set, and dictionary. Convert the set to a list, tuple, and dictionary. Convert the dictionary to a list, tuple, and set.
-#
-#   h. Print Output: Print the results of the type conversion operations.
-#
-#   example:
-#   ```
-#   Enter a series of space-separated integers: 5 2 8 1 9
-#
-#   Tuples are immutable and cannot be modified.
-#   Original Dictionary: {5: 25, 2: 4, 8: 64, 1: 1, 9: 81}
-#   List to Tuple: (5, 2, 20, 1, 9, 10)
-#   List to Set: {1, 2, 5, 9, 10, 20}
-#   List to Dictionary: {5: 25, 2: 4, 20: 400, 1: 1, 9: 81, 10: 100}
-#   Tuple to List: [5, 2, 8, 1, 9]
-#   Tuple to Set: {1, 2, 5, 8, 9}
-#   Tuple to Dictionary: {5: 25, 2: 4, 8: 64, 1: 1, 9: 81}
-#   Set to List: [1, 2, 5, 9, 10, 20]
-#   Set to Tuple: (1, 2, 5, 9, 10, 20)
-#   Set to Dictionary: {1: 1, 2: 4, 5: 25, 9: 81, 10: 100, 20: 400}
-#   Dictionary to List: [5, 2, 20, 1, 9, 10, 11]
-#   Dictionary to Tuple: (5, 2, 20, 1, 9, 10, 11)
-#   Dictionary to Set: {1, 2, 5, 9, 10, 11, 20}
-# ```
-# """
-#
-# # Input
-input_numbers = input("Enter a series of space-separated integers: ")
-#
-# Convert Input
-input_numbers = [int(e)for e in input_numbers.split()]
-lista2= input_numbers.copy()
-print(input_numbers)
-# # Manipulate List
-
-# # Attempt to Modify Tuple (this will raise an error)
-numbers_tuple=tuple(input_numbers)
-# tuple_numb.append()
-#
-# # Set Operations
-numbers_set=set(input_numbers)
-#
-# # Dictionary Operations
-numbers_dict= {lista2: lista2 ** 2 for lista2 in lista2}
-print("Original Dictionary:", numbers_dict)
-# # Add a new key-value pair
-numbers_dict.update({10:100})
-# # Delete an existing key-value pair
-numbers_dict.popitem()
-#
-# # Type Conversion
-list_to_tuple = tuple(lista2)
-list_to_set =set(lista2)
-list_to_dict = {lista2:lista2 for lista2 in lista2}
-print("======================")
-print(list_to_dict)
-tuple_to_list = list(list_to_tuple)
-tuple_to_set =set(list_to_tuple)
-print(tuple_to_set)
-tuple_to_dict ={n:n for n in list_to_tuple}
-print(tuple_to_dict)
-set_to_list = set(list_to_set)
-set_to_tuple = tuple(list_to_set)
-set_to_dict ={n:n for n in list_to_set}
-dict_to_list = list(list_to_dict)
-dict_to_tuple =tuple(tuple_to_dict)
-dict_to_set = set(set_to_dict);
-
-print("================")
+# print(set_difference)
+# #
+# # # Dictionary Operations
+# # numbers_dict={lista:lista**2 for lista in lista}
+# # # print("Original Dictionary:", numbers_dict)
+# # print(numbers_dict)
+# # # Add a new key-value pair
+# # numbers_dict.update( {10:101, 20:201})
+# # print(numbers_dict)
+# # # Delete an existing key-value pair
+# # numbers_dict.popitem()
+# # print(numbers_dict)
+# #
 # # # Print Output
-print("List to Tuple:", list_to_tuple)
-print("List to Set:", list_to_set)
-print("List to Dictionary:", list_to_dict)
-print("Tuple to List:", tuple_to_list)
-print("Tuple to Set:", tuple_to_set)
-print("Tuple to Dictionary:", tuple_to_dict)
-print("Set to List:", set_to_list)
-print("Set to Tuple:", set_to_tuple)
-print("Set to Dictionary:", set_to_dict)
-print("Dictionary to List:", dict_to_list)
-print("Dictionary to Tuple:", dict_to_tuple)
-print("Dictionary to Set:", dict_to_set)
-
-# """8.
-# Extend the previous Python program to write the output to a file and perform operations on that file.
 #
-#   a. ...
+# # print("Modified list:", numbers_list)
+# # print("Tuple remains unchanged:", numbers_tuple)
+# # print("Union of set:", set_union)
+# # print("Intersection of set:", set_intersection)
+# # print("Difference of set:", set_difference)
+# # print("Updated Dictionary:", numbers_dict)
 #
-#   b. ...
+# """7. **Built-in Types and Type Conversion**
+# #
+# #   Extend the previous Python program to demonstrate the use of built-in types and type conversion. Perform the following operations:
+# #
+# #   a. ...
+# #
+# #   b. ...
+# #
+# #   c. ...
+# #
+# #   d. ...
+# #
+# #   e. ...
+# #
+# #   f. ...
+# #
+# #   g. Type Conversion: Convert the list to a tuple, set, and dictionary. Convert the tuple to a list, set, and dictionary. Convert the set to a list, tuple, and dictionary. Convert the dictionary to a list, tuple, and set.
+# #
+# #   h. Print Output: Print the results of the type conversion operations.
+# #
+# #   example:
+# #   ```
+# #   Enter a series of space-separated integers: 5 2 8 1 9
+# #
+# #   Tuples are immutable and cannot be modified.
+# #   Original Dictionary: {5: 25, 2: 4, 8: 64, 1: 1, 9: 81}
+# #   List to Tuple: (5, 2, 20, 1, 9, 10)
+# #   List to Set: {1, 2, 5, 9, 10, 20}
+# #   List to Dictionary: {5: 25, 2: 4, 20: 400, 1: 1, 9: 81, 10: 100}
+# #   Tuple to List: [5, 2, 8, 1, 9]
+# #   Tuple to Set: {1, 2, 5, 8, 9}
+# #   Tuple to Dictionary: {5: 25, 2: 4, 8: 64, 1: 1, 9: 81}
+# #   Set to List: [1, 2, 5, 9, 10, 20]
+# #   Set to Tuple: (1, 2, 5, 9, 10, 20)
+# #   Set to Dictionary: {1: 1, 2: 4, 5: 25, 9: 81, 10: 100, 20: 400}
+# #   Dictionary to List: [5, 2, 20, 1, 9, 10, 11]
+# #   Dictionary to Tuple: (5, 2, 20, 1, 9, 10, 11)
+# #   Dictionary to Set: {1, 2, 5, 9, 10, 11, 20}
+# # ```
+# # """
+# #
+# # # Input
+# input_numbers = input("Enter a series of space-separated integers: ")
+# #
+# # Convert Input
+# input_numbers = [int(e)for e in input_numbers.split()]
+# lista2= input_numbers.copy()
+# print(input_numbers)
+# # # Manipulate List
 #
-#   c. ...
+# # # Attempt to Modify Tuple (this will raise an error)
+# numbers_tuple=tuple(input_numbers)
+# # tuple_numb.append()
+# #
+# # # Set Operations
+# numbers_set=set(input_numbers)
+# #
+# # # Dictionary Operations
+# numbers_dict= {lista2: lista2 ** 2 for lista2 in lista2}
+# print("Original Dictionary:", numbers_dict)
+# # # Add a new key-value pair
+# numbers_dict.update({10:100})
+# # # Delete an existing key-value pair
+# numbers_dict.popitem()
+# #
+# # # Type Conversion
+# list_to_tuple = tuple(lista2)
+# list_to_set =set(lista2)
+# list_to_dict = {lista2:lista2 for lista2 in lista2}
+# print("======================")
+# print(list_to_dict)
+# tuple_to_list = list(list_to_tuple)
+# tuple_to_set =set(list_to_tuple)
+# print(tuple_to_set)
+# tuple_to_dict ={n:n for n in list_to_tuple}
+# print(tuple_to_dict)
+# set_to_list = set(list_to_set)
+# set_to_tuple = tuple(list_to_set)
+# set_to_dict ={n:n for n in list_to_set}
+# dict_to_list = list(list_to_dict)
+# dict_to_tuple =tuple(tuple_to_dict)
+# dict_to_set = set(set_to_dict);
 #
-#   d. ...
+# print("================")
+# # # # Print Output
+# print("List to Tuple:", list_to_tuple)
+# print("List to Set:", list_to_set)
+# print("List to Dictionary:", list_to_dict)
+# print("Tuple to List:", tuple_to_list)
+# print("Tuple to Set:", tuple_to_set)
+# print("Tuple to Dictionary:", tuple_to_dict)
+# print("Set to List:", set_to_list)
+# print("Set to Tuple:", set_to_tuple)
+# print("Set to Dictionary:", set_to_dict)
+# print("Dictionary to List:", dict_to_list)
+# print("Dictionary to Tuple:", dict_to_tuple)
+# print("Dictionary to Set:", dict_to_set)
 #
-#   e. ...
+# # """8.
+# # Extend the previous Python program to write the output to a file and perform operations on that file.
+# #
+# #   a. ...
+# #
+# #   b. ...
+# #
+# #   c. ...
+# #
+# #   d. ...
+# #
+# #   e. ...
+# #
+# #   f. ...
+# #
+# #   g. ...
+# #
+# #   h. Write Output to File: Write all the results (original inputs, modified data structures, type conversion results) to a file.
+# #
+# #   i. Perform Operations on File: Open the file, read its content, and perform some operations
+# #   like counting the number of lines, finding specific data, etc.
+# #
+# #   j. Modify File Content:
+# #   Modify the content of the file by, for example, changing specific lines or adding new lines.
+# # """
 #
-#   f. ...
 #
-#   g. ...
+# input_numbers = input("Enter a series of space-separated integers: ")
+# #
+# # Convert Input
+# input_numbers = [int(e)for e in input_numbers.split()]
+# lista2= input_numbers.copy()
+# print(input_numbers)
+# # # Manipulate List
 #
-#   h. Write Output to File: Write all the results (original inputs, modified data structures, type conversion results) to a file.
+# # # Attempt to Modify Tuple (this will raise an error)
+# tuple_numb=tuple(input_numbers)
+# # tuple_numb.append()
+# #
+# # # Set Operations
+# numbers_set=set(input_numbers)
+# #
+# # # Dictionary Operations
+# numbers_dict= {lista2: lista2 ** 2 for lista2 in lista2}
+# print("Original Dictionary:", numbers_dict)
+# # # Add a new key-value pair
+# numbers_dict.update({10:100})
+# # # Delete an existing key-value pair
+# numbers_dict.popitem()
+# #
 #
-#   i. Perform Operations on File: Open the file, read its content, and perform some operations
-#   like counting the number of lines, finding specific data, etc.
+# student_number = input("Enter your student number: ")
 #
-#   j. Modify File Content:
-#   Modify the content of the file by, for example, changing specific lines or adding new lines.
-# """
-source_file = 'main.py'
-new_text_file = 'copy_main.txt'
-
-
-with (open("main.py", 'r') as source,
-      open("newTxt.txt", 'w') as target):
-    # content = source.read()
-    # target.write(content)
-    for line in source:
-        target.write(line)
-print(f"The content of {source_file} has been copied to {new_text_file}.")
-
-#reading chars
-with open("newTxt.txt", 'r') as file:
-    filecontent= file.read()
-    amount_of_char= len(filecontent)
-
-    print(f"The number of lines in the file is {amount_of_char}.")
-    print(filecontent)
-
-#reading lines
-with open("newTxt.txt","r") as f:
-    lines= sum(1 for line in f)
-    print(f"The sum of line{lines}")
-
-#adding lines
-with open("newTxt.txt","a") as add:
-    add.write("done")
-
-
-input_numbers = input("Enter a series of space-separated integers: ")
+# # Write Output to File like this:
+# "Student Number: " + student_number
+# numbers_list=[int(e) for e in input_numbers.split()]
+# numbers_tuple=tuple(input_numbers)
+# "Original List: " + str(numbers_list)
+# "Original Tuple: " + str(numbers_tuple)
+# "Original Set: " + str(numbers_set)
+# "Original Dictionary: " + str(numbers_dict)
 #
-# Convert Input
-input_numbers = [int(e)for e in input_numbers.split()]
-lista2= input_numbers.copy()
-print(input_numbers)
-# # Manipulate List
-
-# # Attempt to Modify Tuple (this will raise an error)
-tuple_numb=tuple(input_numbers)
-# tuple_numb.append()
+# "Manipulated List: " + str(numbers_list)
+# "Manipulated Tuple: " + str(numbers_tuple)
+# "Union of Set: " + str(set_union)
+# "Intersection of Set: " + str(set_intersection)
+# "Difference of Set: " + str(set_difference)
+# "Updated Dictionary: " + str(numbers_dict)
 #
-# # Set Operations
-numbers_set=set(input_numbers)
+# "List to Tuple: " + str(list_to_tuple)
+# "List to Set: " + str(list_to_set)
+# "List to Dictionary: " + str(list_to_dict)
+# "Tuple to List: " + str(tuple_to_list)
+# "Tuple to Set: " + str(tuple_to_set)
+# "Tuple to Dictionary: " + str(tuple_to_dict)
+# "Set to List: " + str(set_to_list)
+# "Set to Tuple: " + str(set_to_tuple)
+# "Set to Dictionary: " + str(set_to_dict)
+# "Dictionary to List: " + str(dict_to_list)
+# "Dictionary to Tuple: " + str(dict_to_tuple)
+# "Dictionary to Set: " + str(dict_to_set)
+
+# # print "Content of the file:"
 #
-# # Dictionary Operations
-numbers_dict= {lista2: lista2 ** 2 for lista2 in lista2}
-print("Original Dictionary:", numbers_dict)
-# # Add a new key-value pair
-numbers_dict.update({10:100})
-# # Delete an existing key-value pair
-numbers_dict.popitem()
+# # Perform Operations on File:
+# #   Count the number of lines in the file
+# #   Count the number of integers in the file
+# #   Add all integers in the file (sum).
+# #   Modify the content of the file
 #
+# source_file = 'main.py'
+# new_text_file = 'copy_main.txt'
+#
+#
+# with (open("main.py", 'r') as source,
+#       open("newTxt.txt", 'w') as target):
+#     # content = source.read()
+#     # target.write(content)
+#     for line in source:
+#         target.write(line)
+# print(f"The content of {source_file} has been copied to {new_text_file}.")
+#
+# #reading chars
+# with open("newTxt.txt", 'r') as file:
+#     filecontent= file.read()
+#     amount_of_char= len(filecontent)
+#
+#     print(f"The number of lines in the file is {amount_of_char}.")
+#     print(filecontent)
+#
+# #reading lines
+# with open("newTxt.txt","r") as f:
+#     lines= sum(1 for line in f)
+#     print(f"The sum of line{lines}")
+#
+# #adding lines
+# with open("newTxt.txt","a") as add:
+#     add.write("done")
+#
+#
+# # Find the Largest Integer in the File
+# def find_largest_integer(file_path):
+#     largest_integer = None
+#     with open(file_path, 'r') as file:
+#         for line in file:
+#             words = line.split()
+#             for word in words:
+#                 if word.isdigit():
+#                     if largest_integer is None or int(word) > largest_integer:
+#                         largest_integer = int(word)
+#     print(f"The largest integer in the file is {largest_integer}.")
+#     return largest_integer
+#
+# # Sum of All Integers in the File
+# def sum_of_integers(file_path):
+#     total_sum = 0
+#     with open(file_path, 'r') as file:
+#         for line in file:
+#             words = line.split()
+#             for word in words:
+#                 if word.isdigit():
+#                     total_sum += int(word)
+#     print(f"The sum of all integers in the file is {total_sum}.")
+#     return total_sum
 
-student_number = input("Enter your student number: ")
-
-# Write Output to File like this:
-    "Student Number: " + student_number
-    numbers_list=[int(e) for e in input_numbers.split()]
-    "Original List: " + str(numbers_list)
-    numbers_tuple=tuple(input_numbers)
-    "Original Tuple: " + str(numbers_tuple)
-    "Original Set: " + str(numbers_set)
-    "Original Dictionary: " + str(numbers_dict)
-
-    "Manipulated List: " + str(numbers_list)
-    "Manipulated Tuple: " + str(numbers_tuple)
-    "Union of Set: " + str(set_union)
-    "Intersection of Set: " + str(set_intersection)
-    "Difference of Set: " + str(set_difference)
-    "Updated Dictionary: " + str(numbers_dict)
-
-    "List to Tuple: " + str(list_to_tuple)
-    "List to Set: " + str(list_to_set)
-    "List to Dictionary: " + str(list_to_dict)
-    "Tuple to List: " + str(tuple_to_list)
-    "Tuple to Set: " + str(tuple_to_set)
-    "Tuple to Dictionary: " + str(tuple_to_dict)
-    "Set to List: " + str(set_to_list)
-    "Set to Tuple: " + str(set_to_tuple)
-    "Set to Dictionary: " + str(set_to_dict)
-    "Dictionary to List: " + str(dict_to_list)
-    "Dictionary to Tuple: " + str(dict_to_tuple)
-    "Dictionary to Set: " + str(dict_to_set)
-
-# print "Content of the file:"
-
-# Perform Operations on File:
-#   Count the number of lines in the file
-#   Count the number of integers in the file
-#   Add all integers in the file (sum).
-#   Modify the content of the file
 
 # """--------------------------------------------------------------------------------
 # **Control Statements:**
 # Control statements are used in programming to alter the flow of execution based on certain conditions or criteria.
 # In Python, commonly used control statements include:
+
+
+# Now regaarding instructions:task 8,9 as seperate
+# Input from user
+input_numbers = input("Enter a series of space-separated integers: ")
+student_number = input("Enter your student number: ")
+
+# Convert input string to list of integers
+input_list = [int(num) for num in input_numbers.split()]
+
+# Print the original list
+print(f"Original List: {input_list}")
+
+# Tuple conversion
+input_tuple = tuple(input_list)
+
+# Set conversion
+input_set = set(input_list)
+
+# Dictionary conversion (square of each number)
+input_dict = {num: num**2 for num in input_list}
+
+# Perform manipulations
+input_list.append(10)  # Append 10 to the list
+input_list.insert(2, 20)  # Insert 20 at index 2
+
+
+
+# Perform set operations
+set_union = input_set.union({11, 12, 13})
+set_intersection = input_set.intersection({1, 2, 5})
+set_difference = input_set.difference({1, 2})
+
+# Updating the dictionary
+input_dict[10] = 100
+del input_dict[next(iter(input_dict))]  # Remove the first key-value pair
+
+# Writing results to a file
+output_filename = "output.txt"
+with open(output_filename, "w") as file:
+    file.write(f"Student Number: {student_number}\n\n")
+    file.write(f"Original List: {input_list}\n")
+    file.write(f"Original Tuple: {input_tuple}\n")
+    file.write(f"Original Set: {input_set}\n")
+    file.write(f"Original Dictionary: {input_dict}\n\n")
+    file.write(f"Modified List: {input_list}\n")
+    file.write(f"Union of Set: {set_union}\n")
+    file.write(f"Intersection of Set: {set_intersection}\n")
+    file.write(f"Difference of Set: {set_difference}\n")
+    file.write(f"Updated Dictionary: {input_dict}\n\n")
+    file.write(f"Number of Integers: {len(input_list)}\n")
+    file.write(f"Sum of Integers: {sum(input_list)}\n")
+
+# Reading and performing operations on the file
+num_lines = 0
+num_integers = 0
+sum_of_integers = 0
+
+with open(output_filename, "r") as file:
+    for line in file:
+        num_lines += 1
+        words = line.split()
+        for word in words:
+            if word.isdigit():
+                num_integers += 1
+                sum_of_integers += int(word)
+
+print(f"Content of the file has {num_lines} lines, {num_integers} integers, and the sum of integers is {sum_of_integers}.")
+
+# Modify the content of the file
+with open(output_filename, "a") as file:
+    file.write("\nThis is an additional line added to the file.\n")
+
+print(f"Modified the content of {output_filename}.")
+
+
+def is_prime(n):
+    """Check if a number is prime."""
+    if n <= 1:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+
+def get_primes_up_to(n):
+    """Generate a list of all prime numbers up to n."""
+    return [num for num in range(2, n + 1) if is_prime(num)]
+
+
+# Reading the largest integer from 'output.txt'
+largest_integer = 0
+with open("output.txt", "r") as file:
+    for line in file:
+        for word in line.split():
+            if word.isdigit():
+                largest_integer = max(largest_integer, int(word))
+
+if largest_integer == 0:
+    print("No integers found in the file.")
+else:
+    # Generate a list of all prime numbers up to the largest integer
+    prime_numbers = get_primes_up_to(largest_integer)
+
+    # Calculate the sum of all prime numbers
+    sum_of_primes = sum(prime_numbers)
+
+    # Determine the largest and smallest prime numbers
+    largest_prime = max(prime_numbers) if prime_numbers else None
+    smallest_prime = min(prime_numbers) if prime_numbers else None
+
+    # Check if the largest integer itself is prime
+    is_largest_integer_prime = is_prime(largest_integer)
+
+    # Print the results
+    print(f"List of prime numbers up to {largest_integer}: {prime_numbers}")
+    print(f"Sum of prime numbers: {sum_of_primes}")
+    print(f"Largest prime number: {largest_prime}")
+    print(f"Smallest prime number: {smallest_prime}")
+    print(f"Is the largest integer ({largest_integer}) prime? {'Yes' if is_largest_integer_prime else 'No'}")
+
+    # Write the results to 'prime_numbers.txt'
+    with open("prime_numbers.txt", "w") as prime_file:
+        prime_file.write(f"List of prime numbers up to {largest_integer}: {prime_numbers}\n")
+        prime_file.write(f"Sum of prime numbers: {sum_of_primes}\n")
+        prime_file.write(f"Largest prime number: {largest_prime}\n")
+        prime_file.write(f"Smallest prime number: {smallest_prime}\n")
+        prime_file.write(
+            f"Is the largest integer ({largest_integer}) prime? {'Yes' if is_largest_integer_prime else 'No'}\n")
+
+
+
 #
 # `if, elif, else:` These statements are used for conditional execution. They allow the program to execute different blocks of code based on specified conditions.
 #
@@ -561,5 +724,3 @@ student_number = input("Enter your student number: ")
 # """10.
 # In the final main.py file, leave the results from task 8 and 9, commit and push
 # """
-print (amount_of_char)
-print(lines)

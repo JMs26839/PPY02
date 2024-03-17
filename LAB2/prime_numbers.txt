@@ -1,0 +1,5 @@
+List of prime numbers up to 40: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]
+Sum of prime numbers: 197
+Largest prime number: 37
+Smallest prime number: 2
+Is the largest integer (40) prime? No

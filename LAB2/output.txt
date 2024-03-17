@@ -1,0 +1,17 @@
+Student Number: 2 6 8 3 9
+
+Original List: [1, 2, 20, 3, 4, 10]
+Original Tuple: (1, 2, 3, 4)
+Original Set: {1, 2, 3, 4}
+Original Dictionary: {2: 4, 3: 9, 4: 16, 10: 100}
+
+Modified List: [1, 2, 20, 3, 4, 10]
+Union of Set: {1, 2, 3, 4, 11, 12, 13}
+Intersection of Set: {1, 2}
+Difference of Set: {3, 4}
+Updated Dictionary: {2: 4, 3: 9, 4: 16, 10: 100}
+
+Number of Integers: 6
+Sum of Integers: 40
+
+This is an additional line added to the file.
