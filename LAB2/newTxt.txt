@@ -72,26 +72,26 @@ the program should also create a tuple of those integers and perform the followi
   ```
 """
 
+# Input
+# input_numbers = input("Enter a series of space-separated integers: ")
 
-input_numbers = input("Enter a series of space-separated integers: ")
-
-# Convert Input:
-numbers_list=[int(e) for e in input_numbers.split()]
-def convert(list_ints):
-    return tuple(list_ints)
-
-tuples_ints = convert(numbers_list)
-print(type(tuples_ints))
-
-
-# Sorting:
-sorted_tuple=sorted(tuples_ints)
-print(sorted(tuples_ints))
-
-
-#Print Output
-print("Sorted list:", numbers_list)
-print("Sorted tuple:", sorted_tuple)
+# # Convert Input:
+# numbers_list=[int(e) for e in input_numbers.split()]
+# def convert(list_ints):
+#     return tuple(list_ints)
+#
+# tuples_ints = convert(numbers_list)
+# print(type(tuples_ints))
+#
+#
+# # Sorting:
+# sorted_tuple=sorted(tuples_ints)
+# print(sorted(tuples_ints))
+#
+#
+# #Print Output
+# print("Sorted list:", numbers_list)
+# print("Sorted tuple:", sorted_tuple)
 
 """5.
 Extend the previous Python program to demonstrate the manipulation of lists using the append(), insert(), and remove()
@@ -332,19 +332,19 @@ print(input_numbers)
 # # Manipulate List
 
 # # Attempt to Modify Tuple (this will raise an error)
-numbers_tuple=tuple(input_numbers)
+tuple_numb=tuple(input_numbers)
 # tuple_numb.append()
 #
 # # Set Operations
-numbers_set=set(input_numbers)
+set_numb=set(input_numbers)
 #
 # # Dictionary Operations
-numbers_dict= {lista2: lista2 ** 2 for lista2 in lista2}
-print("Original Dictionary:", numbers_dict)
+numbers_dict2= {lista2:lista2**2 for lista2 in lista2}
+print("Original Dictionary:", numbers_dict2)
 # # Add a new key-value pair
-numbers_dict.update({10:100})
+numbers_dict2.update({10:100})
 # # Delete an existing key-value pair
-numbers_dict.popitem()
+numbers_dict2.popitem()
 #
 # # Type Conversion
 list_to_tuple = tuple(lista2)
@@ -434,69 +434,59 @@ with open("newTxt.txt","a") as add:
     add.write("done")
 
 
-input_numbers = input("Enter a series of space-separated integers: ")
+# # Input
+# input_numbers = input("Enter a series of space-separated integers: ")
 #
-# Convert Input
-input_numbers = [int(e)for e in input_numbers.split()]
-lista2= input_numbers.copy()
-print(input_numbers)
+# # Convert Input
+#
 # # Manipulate List
-
+#
 # # Attempt to Modify Tuple (this will raise an error)
-tuple_numb=tuple(input_numbers)
-# tuple_numb.append()
 #
 # # Set Operations
-numbers_set=set(input_numbers)
 #
 # # Dictionary Operations
-numbers_dict= {lista2: lista2 ** 2 for lista2 in lista2}
-print("Original Dictionary:", numbers_dict)
-# # Add a new key-value pair
-numbers_dict.update({10:100})
-# # Delete an existing key-value pair
-numbers_dict.popitem()
 #
-
-student_number = input("Enter your student number: ")
-
-# Write Output to File like this:
-    "Student Number: " + student_number
-    numbers_list=[int(e) for e in input_numbers.split()]
-    "Original List: " + str(numbers_list)
-    numbers_tuple=tuple(input_numbers)
-    "Original Tuple: " + str(numbers_tuple)
-    "Original Set: " + str(numbers_set)
-    "Original Dictionary: " + str(numbers_dict)
-
-    "Manipulated List: " + str(numbers_list)
-    "Manipulated Tuple: " + str(numbers_tuple)
-    "Union of Set: " + str(set_union)
-    "Intersection of Set: " + str(set_intersection)
-    "Difference of Set: " + str(set_difference)
-    "Updated Dictionary: " + str(numbers_dict)
-
-    "List to Tuple: " + str(list_to_tuple)
-    "List to Set: " + str(list_to_set)
-    "List to Dictionary: " + str(list_to_dict)
-    "Tuple to List: " + str(tuple_to_list)
-    "Tuple to Set: " + str(tuple_to_set)
-    "Tuple to Dictionary: " + str(tuple_to_dict)
-    "Set to List: " + str(set_to_list)
-    "Set to Tuple: " + str(set_to_tuple)
-    "Set to Dictionary: " + str(set_to_dict)
-    "Dictionary to List: " + str(dict_to_list)
-    "Dictionary to Tuple: " + str(dict_to_tuple)
-    "Dictionary to Set: " + str(dict_to_set)
-
-# print "Content of the file:"
-
-# Perform Operations on File:
-#   Count the number of lines in the file
-#   Count the number of integers in the file
-#   Add all integers in the file (sum).
-#   Modify the content of the file
-
+# # Type Conversion
+#
+# student_number = input("Enter your student number: ")
+#
+# # Write Output to File like this:
+#     "Student Number: " + student_number
+#
+#     "Original List: " + str(numbers_list)
+#     "Original Tuple: " + str(numbers_tuple)
+#     "Original Set: " + str(numbers_set)
+#     "Original Dictionary: " + str(numbers_dict)
+#
+#     "Manipulated List: " + str(numbers_list)
+#     "Manipulated Tuple: " + str(numbers_tuple)
+#     "Union of Set: " + str(set_union)
+#     "Intersection of Set: " + str(set_intersection)
+#     "Difference of Set: " + str(set_difference)
+#     "Updated Dictionary: " + str(numbers_dict)
+#
+#     "List to Tuple: " + str(list_to_tuple)
+#     "List to Set: " + str(list_to_set)
+#     "List to Dictionary: " + str(list_to_dict)
+#     "Tuple to List: " + str(tuple_to_list)
+#     "Tuple to Set: " + str(tuple_to_set)
+#     "Tuple to Dictionary: " + str(tuple_to_dict)
+#     "Set to List: " + str(set_to_list)
+#     "Set to Tuple: " + str(set_to_tuple)
+#     "Set to Dictionary: " + str(set_to_dict)
+#     "Dictionary to List: " + str(dict_to_list)
+#     "Dictionary to Tuple: " + str(dict_to_tuple)
+#     "Dictionary to Set: " + str(dict_to_set)
+#
+# # print "Content of the file:"
+#
+# # Perform Operations on File:
+# #   Count the number of lines in the file
+# #   Count the number of integers in the file
+# #   Add all integers in the file (sum).
+# #   Modify the content of the file
+#
 # """--------------------------------------------------------------------------------
 # **Control Statements:**
 # Control statements are used in programming to alter the flow of execution based on certain conditions or criteria.
@@ -563,3 +553,4 @@ student_number = input("Enter your student number: ")
 # """
 print (amount_of_char)
 print(lines)
+done
