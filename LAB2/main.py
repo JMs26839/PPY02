@@ -225,36 +225,55 @@ keys (in the case of dictionaries) and elements (in the case of sets) must be ha
 # """
 #
 # # Input
-input_numbers = input("Enter a series of space-separated integers: ")
-#
-# # Convert Input
-set_of_numbers = {input_numbers}
-# Manipulate List
-# con.append(10)
+# input_numbers = input("Enter a series of space-separated integers: ")
+# #
+# # # Convert Input
+# lista = [ int(el)for el in input_numbers.split()]
+# set_of_numbers = set(lista)
+# print(type(set_of_numbers))
+# print(set_of_numbers)
+# # Manipulate List
+
+
 # Append 10 to the list
-# con.insert(2,20)
+# lista.append(10)
 # Insert 20 at index 2
+# lista.insert(2,20)
 # Remove the element 8
+# lista.remove(8)
 # con.remove(8)
 ###############################FinishedHere
 # Attempt to Modify Tuple (this will raise an error)
 # try: tup.append(10)
-#     # Append 10 to the tuple
+    # Append 10 to the tuple
 # except AttributeError:
 #     print("Tuples are immutable and cannot be modified.")
-# #
+#
 # Set Operations
-
-# Union
-# Intersection
-# Difference
-
-# Dictionary Operations
-# print("Original Dictionary:", numbers_dict)
+# set2={1,2,3,4,5,6,7,8,9}
+# # Union
+# union= set_of_numbers.union(set2)
+# print(union)
+# # Intersection
+# inter= set_of_numbers.intersection(set2)
+# print(inter)
+# # Difference
+# difference= set_of_numbers.difference(set2)
+# print(difference)
+#
+# # Dictionary Operations
+# numbers_dict={lista:lista**2 for lista in lista}
+# # print("Original Dictionary:", numbers_dict)
+# print(numbers_dict)
 # # Add a new key-value pair
+# numbers_dict.update( {10:101, 20:201})
+# print(numbers_dict)
 # # Delete an existing key-value pair
+# numbers_dict.popitem()
+# print(numbers_dict)
 #
 # # Print Output
+
 # print("Modified list:", numbers_list)
 # print("Tuple remains unchanged:", numbers_tuple)
 # print("Union of set:", set_union)
@@ -304,41 +323,53 @@ set_of_numbers = {input_numbers}
 # """
 #
 # # Input
-# input_numbers = input("Enter a series of space-separated integers: ")
+input_numbers = input("Enter a series of space-separated integers: ")
 #
-# # Convert Input
-#
+# Convert Input
+input_numbers = [int(e)for e in input_numbers.split()]
+lista2= input_numbers.copy()
+print(input_numbers)
 # # Manipulate List
-#
+
 # # Attempt to Modify Tuple (this will raise an error)
+tuple_numb=tuple(input_numbers)
+# tuple_numb.append()
 #
 # # Set Operations
+set_numb=set(input_numbers)
 #
 # # Dictionary Operations
-# print("Original Dictionary:", numbers_dict)
+numbers_dict2= {lista2:lista2**2 for lista2 in lista2}
+print("Original Dictionary:", numbers_dict2)
 # # Add a new key-value pair
+numbers_dict2.update({10:100})
 # # Delete an existing key-value pair
+numbers_dict2.popitem()
 #
 # # Type Conversion
-# # list_to_tuple =
-# # list_to_set =
-# # list_to_dict =
-# # tuple_to_list =
-# # tuple_to_set =
-# # tuple_to_dict =
-# # set_to_list =
-# # set_to_tuple =
-# # set_to_dict =
-# # dict_to_list =
-# # dict_to_tuple =
-# # dict_to_set =
-#
-# # Print Output
-# print("List to Tuple:", list_to_tuple)
-# print("List to Set:", list_to_set)
-# print("List to Dictionary:", list_to_dict)
-# print("Tuple to List:", tuple_to_list)
-# print("Tuple to Set:", tuple_to_set)
+list_to_tuple = tuple(lista2)
+list_to_set =set(lista2)
+list_to_dict = {lista2:lista2 for lista2 in lista2}
+print("======================")
+print(list_to_dict)
+tuple_to_list = list(list_to_tuple)
+tuple_to_set =set(list_to_tuple)
+print(tuple_to_set)
+tuple_to_dict ={n:n for n in list_to_tuple}
+print(tuple_to_dict)
+# set_to_list =
+# set_to_tuple =
+# set_to_dict =
+# dict_to_list =
+# dict_to_tuple =
+# dict_to_set =
+
+# # # Print Output
+print("List to Tuple:", list_to_tuple)
+print("List to Set:", list_to_set)
+print("List to Dictionary:", list_to_dict)
+print("Tuple to List:", tuple_to_list)
+print("Tuple to Set:", tuple_to_set)
 # print("Tuple to Dictionary:", tuple_to_dict)
 # print("Set to List:", set_to_list)
 # print("Set to Tuple:", set_to_tuple)
@@ -346,7 +377,7 @@ set_of_numbers = {input_numbers}
 # print("Dictionary to List:", dict_to_list)
 # print("Dictionary to Tuple:", dict_to_tuple)
 # print("Dictionary to Set:", dict_to_set)
-#
+
 # """8.
 # Extend the previous Python program to write the output to a file and perform operations on that file.
 #
@@ -426,7 +457,8 @@ set_of_numbers = {input_numbers}
 #
 # """--------------------------------------------------------------------------------
 # **Control Statements:**
-# Control statements are used in programming to alter the flow of execution based on certain conditions or criteria. In Python, commonly used control statements include:
+# Control statements are used in programming to alter the flow of execution based on certain conditions or criteria.
+# In Python, commonly used control statements include:
 #
 # `if, elif, else:` These statements are used for conditional execution. They allow the program to execute different blocks of code based on specified conditions.
 #
