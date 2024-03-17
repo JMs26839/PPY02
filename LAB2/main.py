@@ -357,26 +357,27 @@ tuple_to_set =set(list_to_tuple)
 print(tuple_to_set)
 tuple_to_dict ={n:n for n in list_to_tuple}
 print(tuple_to_dict)
-# set_to_list =
-# set_to_tuple =
-# set_to_dict =
-# dict_to_list =
-# dict_to_tuple =
-# dict_to_set =
+set_to_list = set(list_to_set)
+set_to_tuple = tuple(list_to_set)
+set_to_dict ={n:n for n in list_to_set}
+dict_to_list = list(list_to_dict)
+dict_to_tuple =tuple(tuple_to_dict)
+dict_to_set = set(set_to_dict);
 
+print("================")
 # # # Print Output
 print("List to Tuple:", list_to_tuple)
 print("List to Set:", list_to_set)
 print("List to Dictionary:", list_to_dict)
 print("Tuple to List:", tuple_to_list)
 print("Tuple to Set:", tuple_to_set)
-# print("Tuple to Dictionary:", tuple_to_dict)
-# print("Set to List:", set_to_list)
-# print("Set to Tuple:", set_to_tuple)
-# print("Set to Dictionary:", set_to_dict)
-# print("Dictionary to List:", dict_to_list)
-# print("Dictionary to Tuple:", dict_to_tuple)
-# print("Dictionary to Set:", dict_to_set)
+print("Tuple to Dictionary:", tuple_to_dict)
+print("Set to List:", set_to_list)
+print("Set to Tuple:", set_to_tuple)
+print("Set to Dictionary:", set_to_dict)
+print("Dictionary to List:", dict_to_list)
+print("Dictionary to Tuple:", dict_to_tuple)
+print("Dictionary to Set:", dict_to_set)
 
 # """8.
 # Extend the previous Python program to write the output to a file and perform operations on that file.
